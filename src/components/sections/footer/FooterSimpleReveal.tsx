@@ -41,7 +41,7 @@ const FooterSimpleReveal = ({
   copyright,
   links,
 }: {
-  brand: string;
+  brand: React.ReactNode;
   columns: FooterColumn[];
   copyright: string;
   links: FooterLink[];

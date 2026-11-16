@@ -2,17 +2,30 @@ import { Outlet } from "react-router-dom";
 import NavbarCentered from "@/components/navbars/NavbarCentered";
 import FooterSimpleReveal from "@/components/sections/footer/FooterSimpleReveal";
 
+const LOGO_URL = "https://storage.googleapis.com/webild/users/user_3MADSCziAlAb5QOvY6wGFqwkeep/uploaded-1794843127828-kzkbwf40.png";
+
+const BrandLogo = ({ size = "h-7" }: { size?: string }) => (
+  <span className="inline-flex items-center gap-2.5 font-bold tracking-tight">
+    <img src={LOGO_URL} alt="Veloce Labs Logo" className={`${size} w-auto object-contain shrink-0`} />
+    <span>VELOCE LABS</span>
+  </span>
+);
+
 export default function Layout() {
   return (
     <div className="relative isolate min-h-svh flex flex-col bg-background text-foreground">
       <header data-webild-section="Header">
         <NavbarCentered
           buttonStagger
-          logo="VELOCE LABS"
+          logo={<BrandLogo size="h-7" />}
           navItems={[
             {
               name: "Services",
               href: "#services"
+            },
+            {
+              name: "Clients",
+              href: "#clients"
             },
             {
               name: "Integrations",
@@ -42,7 +55,7 @@ export default function Layout() {
       </main>
       <footer data-webild-section="Footer">
         <FooterSimpleReveal
-          brand="VELOCE LABS"
+          brand={<BrandLogo size="h-8 text-2xl md:text-3xl" />}
           columns={[
             {
               title: "Speciality Services",
