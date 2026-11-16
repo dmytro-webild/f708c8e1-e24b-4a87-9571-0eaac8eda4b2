@@ -15,8 +15,8 @@ export default function Layout() {
               href: "#services"
             },
             {
-              name: "Clients",
-              href: "#clients"
+              name: "Integrations",
+              href: "#tools"
             },
             {
               name: "Pricing",
@@ -73,8 +73,8 @@ export default function Layout() {
                   href: "#about"
                 },
                 {
-                  label: "Our Clients",
-                  href: "#clients"
+                  label: "Tool Integrations",
+                  href: "#tools"
                 },
                 {
                   label: "Team & Leadership",
