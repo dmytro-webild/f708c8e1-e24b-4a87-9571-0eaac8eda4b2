@@ -7,7 +7,10 @@ import StaggerText from "@/components/animation/StaggerText";
 type TeamMember = {
   name: string;
   role: string;
-} & ({ imageSrc: string; videoSrc?: never } | { videoSrc: string; imageSrc?: never });
+  bio?: string;
+  imageSrc?: string;
+  videoSrc?: string;
+};
 
 const TeamOverlayCards = ({
   tag,
@@ -81,14 +84,34 @@ const TeamOverlayCards = ({
           <AppearOnScroll key={member.name} variant={cardAnimation} delay={index * 0.08} className="h-full">
             <div className="relative aspect-4/5 card rounded">
               <div className="relative w-full h-full rounded overflow-hidden">
-                <ParallaxImage src={member.imageSrc} videoSrc={member.videoSrc} />
-
-                <div className="absolute inset-x-4 bottom-4 xl:inset-x-5 xl:bottom-5 2xl:inset-x-6 2xl:bottom-6 flex items-center justify-between gap-4 xl:gap-5 2xl:gap-6 p-4 xl:p-5 2xl:p-6 card backdrop-blur-sm rounded">
-                  <p className="text-lg md:text-xl 2xl:text-2xl font-semibold leading-tight truncate">{member.name}</p>
-                  <div className="px-3 py-2 text-sm bg-primary text-primary-foreground rounded">
-                    <p className="truncate">{member.role}</p>
+                {member.imageSrc || member.videoSrc ? (
+                  <>
+                    <ParallaxImage src={member.imageSrc} videoSrc={member.videoSrc} />
+                    <div className="absolute inset-x-4 bottom-4 xl:inset-x-5 xl:bottom-5 2xl:inset-x-6 2xl:bottom-6 flex items-center justify-between gap-4 xl:gap-5 2xl:gap-6 p-4 xl:p-5 2xl:p-6 card backdrop-blur-sm rounded">
+                      <p className="text-lg md:text-xl 2xl:text-2xl font-semibold leading-tight truncate">{member.name}</p>
+                      <div className="px-3 py-2 text-sm bg-primary text-primary-foreground rounded">
+                        <p className="truncate">{member.role}</p>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <div className="flex flex-col justify-between h-full p-8 md:p-10 card rounded bg-card/60 backdrop-blur border border-border/50">
+                    <div className="flex flex-col gap-4">
+                      <div className="size-16 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center text-primary font-bold text-2xl">
+                        {member.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
+                      </div>
+                      <div className="px-3 py-1 bg-primary/10 border border-primary/20 text-primary rounded-full text-xs font-semibold w-fit">
+                        {member.role}
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <h3 className="text-2xl md:text-3xl font-bold text-foreground">{member.name}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {member.bio || "Engineered by innovators & startup founders."}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </AppearOnScroll>

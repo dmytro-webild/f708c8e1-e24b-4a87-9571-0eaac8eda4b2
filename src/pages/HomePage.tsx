@@ -9,6 +9,13 @@ import LightRaysCornerBackground from "@/components/backgrounds/LightRaysCornerB
 import AppearOnScroll from "@/components/animation/AppearOnScroll";
 import { Code, Shield, Database, Cpu, Lock, Zap, User } from "lucide-react";
 
+// Tool Icon SVGs
+const notionSvg = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'><path d='M4.459 4.258c.746.606 1.026.56 2.428.466l12.113-.794c.28 0 .047-.28-.046-.326L16.48 1.776c-.467-.374-1.121-.56-2.008-.467L3.06 2.29c-.373.047-.467.28-.28.467zm.7 3.967v13.633c0 .84.373 1.214 1.26 1.167l14.475-.84c.887-.047 1.12-.607 1.12-1.353V7.085c0-.747-.326-.98-.933-.933l-14.94.887c-.654.047-.982.373-.982 1.186zm13.12 1.353c.094.42 0 .84-.42.887l-.7.14v10.364c0 .7-.374 1.027-1.12 1.074l-2.755.14c-.327 0-.514-.14-.514-.42v-.373c0-.28.187-.467.514-.514l1.167-.14V11.23l-3.922 8.497c-.28.607-.607.794-1.074.794h-.28c-.467-.094-.747-.42-.84-.933l-1.635-8.59v7.75c.42.047.747.187.747.514v.373c0 .28-.234.42-.514.42H5.771c-.327 0-.514-.14-.514-.42v-.373c0-.327.28-.467.654-.514l1.12-.14V9.69L5.865 9.55c-.327 0-.514-.234-.467-.56l.233-1.4c.094-.374.374-.514.887-.56l13.028-.794c.56-.047.887.187.98.514z'/></svg>";
+const gmailSvg = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ea4335'><path d='M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.573l8.073-6.08C21.691 2.279 24 3.434 24 5.457z'/></svg>";
+const slackSvg = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e01e5a'><path d='M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zm1.271 0a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zm0 1.271a2.528 2.528 0 0 1 11.393 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zm10.122 2.521a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zm-1.268 0a2.528 2.528 0 0 1-2.521 2.521 2.528 2.528 0 0 1-2.521-2.521V2.522A2.528 2.528 0 0 1 15.165 0a2.528 2.528 0 0 1 2.521 2.522v6.312zm-2.521 10.122a2.528 2.528 0 0 1 2.521 2.52 2.528 2.528 0 0 1-2.521 2.522 2.528 2.528 0 0 1-2.521-2.522v-2.52h2.521zm0-1.268a2.528 2.528 0 0 1-2.521-2.521 2.528 2.528 0 0 1 2.521-2.521h6.313A2.528 2.528 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.521h-6.313z'/></svg>";
+const figmaSvg = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f24e1e'><path d='M12 12A4 4 0 1 1 16 8a4 4 0 0 1-4 4zm0 0a4 4 0 1 1-4-4 4 4 0 0 1 4 4zm0 0v8a4 4 0 1 1-4-4 4 4 0 0 1 4 4zm0-8a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm0-8a4 4 0 1 1-4-4 4 4 0 0 1 4 4z'/></svg>";
+const githubSvg = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'><path d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z'/></svg>";
+
 export default function HomePage() {
   return (
     <>
@@ -17,16 +24,16 @@ export default function HomePage() {
       {/* Hero Section */}
       <div id="hero" data-webild-section="HeroToolRing" data-webild-section-id="HeroToolRing-1" data-section="hero" className="relative isolate">
         <HeroToolRing
-          title="Custom Software & SaaS by"
+          title="Software & SaaS by"
           titleMuted="Veloce Labs."
-          description="We are a software engineering firm specialized in customized web & mobile apps, cyber security, CRM, PLM, and ERP systems. We launch our own startups and help clients create their own SaaS and custom web apps."
+          description="Engineered by innovators & startup founders. We build tailored web & mobile apps, SaaS platforms, and enterprise solutions designed for high growth."
           detail={{
-            title: "CEO & Leadership",
+            title: "CEO & Founder",
             description: "Moheb Awichewi"
           }}
           stat={{
             value: 100,
-            label: "% Custom Solutions"
+            label: "% Tailored Engineering"
           }}
           primaryButton={{
             text: "Start Your Project",
@@ -37,85 +44,48 @@ export default function HomePage() {
             href: "#services"
           }}
           items={[
-            {
-              imageSrc: "https://storage.googleapis.com/webild/users/user_3MADSCziAlAb5QOvY6wGFqwkeep/uploaded-1794833346604-86bbv9ad.png"
-            },
-            {
-              imageSrc: "https://storage.googleapis.com/webild/users/user_3MADSCziAlAb5QOvY6wGFqwkeep/uploaded-1794833346605-8dqa933l.jpg"
-            },
-            {
-              imageSrc: "https://storage.googleapis.com/webild/users/user_3MADSCziAlAb5QOvY6wGFqwkeep/uploaded-1794833346606-5f1fikxr.jpg"
-            },
-            {
-              imageSrc: "https://storage.googleapis.com/webild/users/user_3MADSCziAlAb5QOvY6wGFqwkeep/uploaded-1794833346606-kmj53b5u.png"
-            },
-            {
-              imageSrc: "https://storage.googleapis.com/webild/users/user_3MADSCziAlAb5QOvY6wGFqwkeep/uploaded-1794833346605-14d4xx52.png"
-            }
+            { imageSrc: notionSvg },
+            { imageSrc: gmailSvg },
+            { imageSrc: slackSvg },
+            { imageSrc: figmaSvg },
+            { imageSrc: githubSvg }
           ]}
         />
       </div>
 
-      {/* Client Logos Section */}
-      <div id="clients" data-webild-section="ClientLogos" data-webild-section-id="ClientLogos-1" data-section="clients" className="py-16 border-y border-border/40 bg-card/30">
+      {/* Integrations Section */}
+      <div id="tools" data-webild-section="ToolIntegrations" data-webild-section-id="ToolIntegrations-1" data-section="tools" className="py-16 border-y border-border/40 bg-card/30">
         <div className="w-full max-w-6xl px-6 mx-auto flex flex-col items-center gap-8">
           <AppearOnScroll variant="fade">
             <div className="flex flex-col items-center text-center gap-2">
               <div className="px-3 py-1 text-sm card rounded w-fit">
-                <p>Our Clients</p>
+                <p>Ecosystem Integrations</p>
               </div>
-              <h2 className="text-2xl md:text-3xl font-semibold">Trusted by Leading Companies</h2>
+              <h2 className="text-2xl md:text-3xl font-semibold">Native Tool & Platform Integrations</h2>
               <p className="text-sm md:text-base text-muted-foreground max-w-xl">
-                Partnering with ambitious startups and businesses to deliver high-performance custom applications and enterprise platforms.
+                Seamlessly connecting your custom apps with Notion, Gmail, Slack, Figma, GitHub, and cloud platforms.
               </p>
             </div>
           </AppearOnScroll>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-            {/* Client 1: Colis */}
-            <AppearOnScroll variant="slide-up" delay={0.05}>
-              <div className="flex flex-col items-center justify-center p-6 card rounded-xl transition-all duration-300 hover:border-primary/50 group text-center h-full">
-                <div className="w-full h-28 flex items-center justify-center p-4 bg-white/5 rounded-lg mb-4">
-                  <img
-                    src="https://storage.googleapis.com/webild/users/user_3MADSCziAlAb5QOvY6wGFqwkeep/uploaded-1794833346605-8dqa933l.jpg"
-                    alt="Colis Delivery"
-                    className="max-h-20 max-w-full object-contain rounded transition-transform duration-300 group-hover:scale-105"
-                  />
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 w-full">
+            {[
+              { name: "Notion", desc: "Workspace Sync", icon: notionSvg },
+              { name: "Gmail", desc: "Mail & Automation", icon: gmailSvg },
+              { name: "Slack", desc: "Webhooks & Bots", icon: slackSvg },
+              { name: "Figma", desc: "Design Systems", icon: figmaSvg },
+              { name: "GitHub", desc: "CI/CD & Codebases", icon: githubSvg },
+            ].map((tool) => (
+              <AppearOnScroll key={tool.name} variant="slide-up" delay={0.05}>
+                <div className="flex flex-col items-center justify-center p-5 card rounded-xl transition-all duration-300 hover:border-primary/50 group text-center h-full">
+                  <div className="w-12 h-12 flex items-center justify-center p-2 bg-white/5 rounded-lg mb-3">
+                    <img src={tool.icon} alt={tool.name} className="size-6 object-contain" />
+                  </div>
+                  <h3 className="text-base font-semibold">{tool.name}</h3>
+                  <p className="text-xs text-muted-foreground mt-0.5">{tool.desc}</p>
                 </div>
-                <h3 className="text-xl font-semibold">Colis</h3>
-                <p className="text-xs text-muted-foreground mt-1">Smart Logistics & Delivery Platform</p>
-              </div>
-            </AppearOnScroll>
-
-            {/* Client 2: Crystal Clear Tech */}
-            <AppearOnScroll variant="slide-up" delay={0.1}>
-              <div className="flex flex-col items-center justify-center p-6 card rounded-xl transition-all duration-300 hover:border-primary/50 group text-center h-full">
-                <div className="w-full h-28 flex items-center justify-center p-4 bg-white/5 rounded-lg mb-4">
-                  <img
-                    src="https://storage.googleapis.com/webild/users/user_3MADSCziAlAb5QOvY6wGFqwkeep/uploaded-1794833346606-5f1fikxr.jpg"
-                    alt="Crystal Clear Tech"
-                    className="max-h-20 max-w-full object-contain rounded transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold">Crystal Clear Tech</h3>
-                <p className="text-xs text-muted-foreground mt-1">Technology & IT Solutions</p>
-              </div>
-            </AppearOnScroll>
-
-            {/* Client 3: Mabfem */}
-            <AppearOnScroll variant="slide-up" delay={0.15}>
-              <div className="flex flex-col items-center justify-center p-6 card rounded-xl transition-all duration-300 hover:border-primary/50 group text-center h-full">
-                <div className="w-full h-28 flex items-center justify-center p-4 bg-white/5 rounded-lg mb-4">
-                  <img
-                    src="https://storage.googleapis.com/webild/users/user_3MADSCziAlAb5QOvY6wGFqwkeep/uploaded-1794833346606-kmj53b5u.png"
-                    alt="Mabfem"
-                    className="max-h-20 max-w-full object-contain rounded transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold">Mabfem</h3>
-                <p className="text-xs text-muted-foreground mt-1">Enterprise Business Client</p>
-              </div>
-            </AppearOnScroll>
+              </AppearOnScroll>
+            ))}
           </div>
         </div>
       </div>
@@ -123,7 +93,7 @@ export default function HomePage() {
       {/* About Section */}
       <div id="about" data-webild-section="AboutTextWave" data-webild-section-id="AboutTextWave-1" data-section="about">
         <AboutTextWave
-          title="Veloce Labs is a software engineering firm built to engineer tailored web apps, mobile applications, Cyber Security architecture, CRM, PLM, and ERP systems — while scaling our own startups and helping clients launch their own SaaS."
+          title="Veloce Labs is engineered by innovators and startup founders to craft bespoke web applications, mobile apps, SaaS products, and custom enterprise software."
           primaryButton={{
             text: "Start Your Project",
             href: "#contact"
@@ -204,8 +174,8 @@ export default function HomePage() {
                   aiResponse: "We build custom ERP, CRM, PLM, and Cyber Security infrastructure."
                 },
                 {
-                  userMessage: "Who leads the engineering team at Veloce Labs?",
-                  aiResponse: "CEO Moheb Awichewi leads all strategic engineering projects."
+                  userMessage: "Who leads Veloce Labs?",
+                  aiResponse: "CEO & Founder Moheb Awichewi leads our engineering direction."
                 }
               ],
               placeholder: "Ask about Veloce Labs...",
@@ -223,7 +193,7 @@ export default function HomePage() {
           cardAnimation="rotate-scale"
           textAnimation="slide-up"
           tag="Why Veloce Labs"
-          title="Engineering excellence grounded in innovation."
+          title="Engineered by innovators & startup founders."
           features={[
             {
               icon: Shield,
@@ -244,10 +214,10 @@ export default function HomePage() {
             {
               icon: Zap,
               stat: {
-                value: 1000,
-                suffix: " TND"
+                value: 100,
+                suffix: "%"
               },
-              title: "Starting price for custom project packages"
+              title: "Customized solutions for ambitious startups & enterprises"
             }
           ]}
         />
@@ -261,7 +231,7 @@ export default function HomePage() {
           cardAnimation="rotate-scale"
           textAnimation="slide-up"
           tag="Pricing Packages"
-          title="Transparent engineering pricing starting from 1 000 TND."
+          title="Transparent engineering pricing tailored to your scale."
           plans={[
             {
               tag: "Starter MVP",
@@ -280,7 +250,7 @@ export default function HomePage() {
             },
             {
               tag: "Pro SaaS & App",
-              price: "3 500 TND",
+              price: "Customized",
               description: "Complete custom web app, mobile app, or SaaS platform.",
               primaryButton: {
                 text: "Get Started",
@@ -295,7 +265,7 @@ export default function HomePage() {
             },
             {
               tag: "Enterprise System",
-              price: "7 500 TND",
+              price: "Customized",
               description: "Bespoke ERP, CRM, PLM, and Cyber Security infrastructure.",
               primaryButton: {
                 text: "Get Started",
@@ -334,12 +304,7 @@ export default function HomePage() {
             {
               name: "Moheb Awichewi",
               role: "CEO & Founder",
-              imageSrc: "https://storage.googleapis.com/webild/default/templates/ai-consulting/ceo-1600.webp"
-            },
-            {
-              name: "Veloce Engineering Squad",
-              role: "Full-Stack & Security Architects",
-              imageSrc: "https://storage.googleapis.com/webild/default/templates/ai-consulting/cto-1600.webp"
+              bio: "Chief Executive Officer & Founder at Veloce Labs. Leading custom software engineering and startup creation."
             }
           ]}
         />
@@ -357,11 +322,6 @@ export default function HomePage() {
           description="Get in touch with CEO Moheb Awichewi and the Veloce Labs team to discuss your custom web apps, mobile apps, SaaS startup, Cyber Security, CRM, PLM, or ERP project."
           inputPlaceholder="Enter your email address"
           buttonText="Submit Request"
-          contactInfo={{
-            ceo: "Moheb Awichewi",
-            email: "Mohebawichewi9@gmail.com",
-            phone: "+216 50 564 964"
-          }}
         />
       </div>
     </>
