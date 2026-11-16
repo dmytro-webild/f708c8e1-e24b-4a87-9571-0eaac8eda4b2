@@ -16,11 +16,11 @@ interface CursorPhotoTrailProps {
 }
 
 const DEFAULT_ITEMS: NonNullable<CursorPhotoTrailProps["items"]> = [
-  { imageSrc: "https://images.pexels.com/photos/1179863/pexels-photo-1179863.jpeg?auto=compress&cs=tinysrgb&w=1200" },
-  { imageSrc: "https://images.pexels.com/photos/10499488/pexels-photo-10499488.jpeg?auto=compress&cs=tinysrgb&w=1200" },
-  { imageSrc: "https://images.pexels.com/photos/10923534/pexels-photo-10923534.jpeg?auto=compress&cs=tinysrgb&w=1200" },
-  { imageSrc: "https://images.pexels.com/photos/11979193/pexels-photo-11979193.jpeg?auto=compress&cs=tinysrgb&w=1200" },
-  { imageSrc: "https://images.pexels.com/photos/12010421/pexels-photo-12010421.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+  { imageSrc: "https://images.pexels.com/photos/1179863/pexels-photo-1179863.jpeg?auto=compress&cs=tinysrgb&w=1200&_wi=2" },
+  { imageSrc: "https://images.pexels.com/photos/10499488/pexels-photo-10499488.jpeg?auto=compress&cs=tinysrgb&w=1200&_wi=3" },
+  { imageSrc: "https://images.pexels.com/photos/10923534/pexels-photo-10923534.jpeg?auto=compress&cs=tinysrgb&w=1200&_wi=2" },
+  { imageSrc: "https://images.pexels.com/photos/11979193/pexels-photo-11979193.jpeg?auto=compress&cs=tinysrgb&w=1200&_wi=2" },
+  { imageSrc: "https://images.pexels.com/photos/12010421/pexels-photo-12010421.jpeg?auto=compress&cs=tinysrgb&w=1200&_wi=1" },
 ];
 
 const CursorPhotoTrail = ({ items = DEFAULT_ITEMS, className = "" }: CursorPhotoTrailProps) => {
