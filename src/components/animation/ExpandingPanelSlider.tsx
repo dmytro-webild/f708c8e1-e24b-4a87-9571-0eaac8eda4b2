@@ -16,10 +16,10 @@ interface ExpandingPanelSliderProps {
 }
 
 const DEFAULT_ITEMS: NonNullable<ExpandingPanelSliderProps["items"]> = [
-  { title: "Design that ships", description: "Built for the long run", imageSrc: "https://images.pexels.com/photos/1179863/pexels-photo-1179863.jpeg?auto=compress&cs=tinysrgb&w=1200" },
-  { title: "Clear structure", description: "Built for the long run", imageSrc: "https://images.pexels.com/photos/10499488/pexels-photo-10499488.jpeg?auto=compress&cs=tinysrgb&w=1200" },
-  { title: "Quiet details", description: "Built for the long run", imageSrc: "https://images.pexels.com/photos/10923534/pexels-photo-10923534.jpeg?auto=compress&cs=tinysrgb&w=1200" },
-  { title: "Honest craft", description: "Built for the long run", imageSrc: "https://images.pexels.com/photos/11979193/pexels-photo-11979193.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+  { title: "Design that ships", description: "Built for the long run", imageSrc: "https://images.pexels.com/photos/1179863/pexels-photo-1179863.jpeg?auto=compress&cs=tinysrgb&w=1200&_wi=3" },
+  { title: "Clear structure", description: "Built for the long run", imageSrc: "https://images.pexels.com/photos/10499488/pexels-photo-10499488.jpeg?auto=compress&cs=tinysrgb&w=1200&_wi=6" },
+  { title: "Quiet details", description: "Built for the long run", imageSrc: "https://images.pexels.com/photos/10923534/pexels-photo-10923534.jpeg?auto=compress&cs=tinysrgb&w=1200&_wi=3" },
+  { title: "Honest craft", description: "Built for the long run", imageSrc: "https://images.pexels.com/photos/11979193/pexels-photo-11979193.jpeg?auto=compress&cs=tinysrgb&w=1200&_wi=3" },
 ];
 
 const ExpandingPanelSlider = ({ items = DEFAULT_ITEMS }: ExpandingPanelSliderProps) => {

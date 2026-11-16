@@ -19,12 +19,12 @@ interface SpreadingCardStackProps {
 }
 
 const DEFAULT_ITEMS: NonNullable<SpreadingCardStackProps["items"]> = [
-  { title: "Design that ships", description: "Built for the long run.", imageSrc: "https://images.pexels.com/photos/39219673/pexels-photo-39219673.jpeg?auto=compress&cs=tinysrgb&w=1200" },
-  { title: "Clear systems", description: "Every detail has a reason.", imageSrc: "https://images.pexels.com/photos/8436617/pexels-photo-8436617.jpeg?auto=compress&cs=tinysrgb&w=1200" },
-  { title: "Fast delivery", description: "From brief to launch.", imageSrc: "https://images.pexels.com/photos/10499488/pexels-photo-10499488.jpeg?auto=compress&cs=tinysrgb&w=1200" },
-  { title: "Honest craft", description: "Made by hand, checked twice.", imageSrc: "https://images.pexels.com/photos/20768597/pexels-photo-20768597.jpeg?auto=compress&cs=tinysrgb&w=1200" },
-  { title: "Real support", description: "People who pick up the phone.", imageSrc: "https://images.pexels.com/photos/38975946/pexels-photo-38975946.jpeg?auto=compress&cs=tinysrgb&w=1200" },
-  { title: "Fair pricing", description: "No surprises on the invoice.", imageSrc: "https://images.pexels.com/photos/4129384/pexels-photo-4129384.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+  { title: "Design that ships", description: "Built for the long run.", imageSrc: "https://images.pexels.com/photos/39219673/pexels-photo-39219673.jpeg?auto=compress&cs=tinysrgb&w=1200&_wi=6" },
+  { title: "Clear systems", description: "Every detail has a reason.", imageSrc: "https://images.pexels.com/photos/8436617/pexels-photo-8436617.jpeg?auto=compress&cs=tinysrgb&w=1200&_wi=6" },
+  { title: "Fast delivery", description: "From brief to launch.", imageSrc: "https://images.pexels.com/photos/10499488/pexels-photo-10499488.jpeg?auto=compress&cs=tinysrgb&w=1200&_wi=11" },
+  { title: "Honest craft", description: "Made by hand, checked twice.", imageSrc: "https://images.pexels.com/photos/20768597/pexels-photo-20768597.jpeg?auto=compress&cs=tinysrgb&w=1200&_wi=6" },
+  { title: "Real support", description: "People who pick up the phone.", imageSrc: "https://images.pexels.com/photos/38975946/pexels-photo-38975946.jpeg?auto=compress&cs=tinysrgb&w=1200&_wi=5" },
+  { title: "Fair pricing", description: "No surprises on the invoice.", imageSrc: "https://images.pexels.com/photos/4129384/pexels-photo-4129384.jpeg?auto=compress&cs=tinysrgb&w=1200&_wi=4" },
 ];
 
 const STAGGER = 0.1;

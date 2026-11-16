@@ -38,10 +38,10 @@ interface CardWheelSliderProps {
 }
 
 const DEFAULT_ITEMS: CardWheelSliderItem[] = [
-  { title: "Design that ships", description: "Built for the long run.", imageSrc: "https://images.pexels.com/photos/39219673/pexels-photo-39219673.jpeg?auto=compress&cs=tinysrgb&w=1200" },
-  { title: "Clear systems", description: "Every detail has a reason.", imageSrc: "https://images.pexels.com/photos/8436617/pexels-photo-8436617.jpeg?auto=compress&cs=tinysrgb&w=1200" },
-  { title: "Fast delivery", description: "From brief to launch.", imageSrc: "https://images.pexels.com/photos/10499488/pexels-photo-10499488.jpeg?auto=compress&cs=tinysrgb&w=1200" },
-  { title: "Honest craft", description: "Made by hand, checked twice.", imageSrc: "https://images.pexels.com/photos/20768597/pexels-photo-20768597.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+  { title: "Design that ships", description: "Built for the long run.", imageSrc: "https://images.pexels.com/photos/39219673/pexels-photo-39219673.jpeg?auto=compress&cs=tinysrgb&w=1200&_wi=1" },
+  { title: "Clear systems", description: "Every detail has a reason.", imageSrc: "https://images.pexels.com/photos/8436617/pexels-photo-8436617.jpeg?auto=compress&cs=tinysrgb&w=1200&_wi=1" },
+  { title: "Fast delivery", description: "From brief to launch.", imageSrc: "https://images.pexels.com/photos/10499488/pexels-photo-10499488.jpeg?auto=compress&cs=tinysrgb&w=1200&_wi=2" },
+  { title: "Honest craft", description: "Made by hand, checked twice.", imageSrc: "https://images.pexels.com/photos/20768597/pexels-photo-20768597.jpeg?auto=compress&cs=tinysrgb&w=1200&_wi=1" },
 ];
 
 const mod = (value: number, total: number) => ((value % total) + total) % total;
