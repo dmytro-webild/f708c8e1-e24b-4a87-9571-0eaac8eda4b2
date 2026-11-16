@@ -10,7 +10,7 @@ import StaggerText from "@/components/animation/StaggerText";
 const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
 
 interface NavbarCenteredProps {
-  logo?: string;
+  logo?: React.ReactNode;
   navItems?: { name: string; href: string }[];
   ctaButton?: { text: string; href: string };
   buttonStagger?: boolean;
