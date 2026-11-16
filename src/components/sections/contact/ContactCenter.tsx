@@ -3,6 +3,7 @@ import AppearOnScroll from "@/components/animation/AppearOnScroll";
 import WordByWordReveal from "@/components/animation/WordByWordReveal";
 import GradientWordReveal from "@/components/animation/GradientWordReveal";
 import StaggerText from "@/components/animation/StaggerText";
+import { Mail, Phone, User } from "lucide-react";
 
 type ContactCenterProps = {
   tag: string;
@@ -15,6 +16,11 @@ type ContactCenterProps = {
   buttonStagger?: boolean;
   wideContent?: boolean;
   textAnimation: "slide-up" | "fade-blur" | "fade";
+  contactInfo?: {
+    email?: string;
+    phone?: string;
+    ceo?: string;
+  };
 };
 
 const ContactCenter = ({
@@ -28,6 +34,7 @@ const ContactCenter = ({
   buttonStagger,
   wideContent,
   textAnimation,
+  contactInfo,
 }: ContactCenterProps) => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -105,6 +112,44 @@ const ContactCenter = ({
 
             {error && (
               <p className="text-sm text-red-500 text-center">{error}</p>
+            )}
+
+            {contactInfo && (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full mt-8 pt-6 border-t border-border/40">
+                {contactInfo.ceo && (
+                  <div className="flex items-center gap-3 p-3.5 card rounded text-left">
+                    <div className="p-2.5 rounded-full bg-primary/10 text-primary shrink-0">
+                      <User className="size-5" />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">CEO & Founder</p>
+                      <p className="text-sm font-semibold truncate">{contactInfo.ceo}</p>
+                    </div>
+                  </div>
+                )}
+                {contactInfo.email && (
+                  <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-3 p-3.5 card rounded text-left hover:border-primary/50 transition-colors">
+                    <div className="p-2.5 rounded-full bg-primary/10 text-primary shrink-0">
+                      <Mail className="size-5" />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Email Us</p>
+                      <p className="text-sm font-semibold truncate">{contactInfo.email}</p>
+                    </div>
+                  </a>
+                )}
+                {contactInfo.phone && (
+                  <a href={`tel:${contactInfo.phone.replace(/\s+/g, '')}`} className="flex items-center gap-3 p-3.5 card rounded text-left hover:border-primary/50 transition-colors">
+                    <div className="p-2.5 rounded-full bg-primary/10 text-primary shrink-0">
+                      <Phone className="size-5" />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Call Us</p>
+                      <p className="text-sm font-semibold truncate">{contactInfo.phone}</p>
+                    </div>
+                  </a>
+                )}
+              </div>
             )}
           </div>
         </AppearOnScroll>
